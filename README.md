@@ -1,27 +1,60 @@
-# 👀 Hey, cute foreigner
-**I'm Nicolás (he/him)**, i'm a full-stack developer (preferring backend), musician, artist and singer,  I'm currently interested in developing API's, micro-services and connecting games with thing you might not even think about.
+# me (at) nikitastrike.co
 
-<details>
-  <summary align="right" style="font-size:14px;"> ⚙️ <span style="text-decoration:underline wavy #8c8c8c; text-decoration-thickness: .14rem;">my skills</span></summary>
-  <hr style="margin-top:-1rem">
-  <p align="center"> 
-  <img src="https://skillicons.dev/icons?i=js,nodejs,react,php,py,cs,cpp,dotnet,bash,arduino,bots,linux,mysql,mongodb,nginx,docker,cloudflare,blender&theme=dark&perline=6">
+**Software Architect | Backend & Low-Latency | Music Producer**
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=rust,go,py,ts,linux,bash,docker,mysql,nginx,cloudflare&theme=dark" />
 </p>
-  </details>
-  
+
 ---
-<details>
-    <summary style="font-size:14px;">👥 <span
-            style="text-decoration:underline wavy #bc8dfc; text-decoration-thickness: .20rem;">my social networks</span>
-    </summary>
-    <hr style="margin-top:-1rem">
-  <p align="center">
-  <a style="display: block;" href="https://nikitacontreras.github.io/nikitacontreras/"><img src="https://img.shields.io/badge/portfolio-001?style=for-the-badge&logo=ko-fi&logoColor=white"></a>
-  <a style="display: block;" href="https://www.linkedin.com/in/nikitastrike"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-   <a style="display: block;" href="https://twitter.com/nikcontre"><img src="https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"></a>
-   <a style="display: block;" href="https://open.spotify.com/artist/27yHQqsBreMCdgWfxerH0R?si=b5322e91058d4156"><img src="https://img.shields.io/badge/spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white"></a></li>
-   <a style="display: block;" href="https://www.youtube.com/@_STRIKEMEDIA_/"><img src="https://img.shields.io/youtube/channel/subscribers/UCm3XaWg7vq0LvIHlUJV2Qhg?style=for-the-badge&logo=youtube&logoColor=white"></a>
-   </p>
-</details>
- 
- ---
+
+### 📊 Overview
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=nikitacontreras&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&line_height=21" width="48%">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nikitacontreras&layout=compact&theme=tokyonight&hide_border=true" width="48%">
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=nikitacontreras&theme=tokyonight&no-bg=true&no-frame=true&margin-w=15" alt="GitHub Trophies">
+</p>
+
+---
+
+### 📦 Top Repositories
+
+<p align="center">
+  <a href="https://github.com/nikitacontreras/dawparse">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nikitacontreras&repo=dawparse&theme=tokyonight" width="48%">
+  </a>
+  <a href="https://github.com/nikitacontreras/desample">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nikitacontreras&repo=desample&theme=tokyonight" width="48%">
+  </a>
+  <a href="https://github.com/nikitacontreras/wavevault">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nikitacontreras&repo=wavevault&theme=tokyonight" width="48%">
+  </a>
+  <a href="https://github.com/nikitacontreras/gitspy">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nikitacontreras&repo=gitspy&theme=tokyonight" width="48%">
+  </a>
+  <a href="https://github.com/nikitacontreras/gonarc">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nikitacontreras&repo=gonarc&theme=tokyonight" width="48%">
+  </a>
+  <a href="https://github.com/nikitacontreras/gios">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nikitacontreras&repo=gios&theme=tokyonight" width="48%">
+  </a>
+  <a href="https://github.com/nikitacontreras/gios-platform-assets">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nikitacontreras&repo=gios-platform-assets&theme=tokyonight" width="48%">
+  </a>
+  <a href="https://github.com/nikitacontreras/chaturbapi">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nikitacontreras&repo=chaturbapi&theme=tokyonight" width="48%">
+  </a>
+  <a href="https://github.com/nikitacontreras/roomie">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=nikitacontreras&repo=roomie&theme=tokyonight" width="48%">
+  </a>
+</p>
+
+---
+
+<p align="center">
+  <a href="https://nikitacontreras.github.io/nikitacontreras/"><img src="https://img.shields.io/badge/Portfolio-001?style=for-the-badge&logo=ko-fi&logoColor=white&color=6F42C1"></a>
+</p>
