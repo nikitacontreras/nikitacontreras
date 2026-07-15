@@ -68,6 +68,7 @@
         fill: var(--letter-color) !important;
         opacity: 0;
         transform-origin: center;
+        /* Combinamos la animación inicial de entrada con un loop sutil */
         animation: fadeInLetterRect 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
       }
       
@@ -77,6 +78,17 @@
       #letters rect:nth-child(5n+3) { animation-delay: 0.4s; }
       #letters rect:nth-child(5n+4) { animation-delay: 0.55s; }
       #letters rect:nth-child(5n+5) { animation-delay: 0.7s; }
+
+      /* Animación en bucle infinito para grupos específicos de píxeles para dar sensación de datos fluyendo/parpadeo */
+      #letters rect:nth-child(7n+1) {
+        animation: fadeInLetterRect 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, pixelGlow1 6s ease-in-out infinite 2s;
+      }
+      #letters rect:nth-child(7n+3) {
+        animation: fadeInLetterRect 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, pixelGlow2 8s ease-in-out infinite 3.5s;
+      }
+      #letters rect:nth-child(7n+5) {
+        animation: fadeInLetterRect 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, pixelGlow3 7s ease-in-out infinite 1.2s;
+      }
 
       .bg-rect {
         fill: url(#bg-glow);
@@ -116,6 +128,25 @@
           opacity: 1;
           transform: scale(1) translateY(0);
         }
+      }
+
+      /* Parpadeos suaves e individuales en loop */
+      @keyframes pixelGlow1 {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.55; }
+      }
+
+      @keyframes pixelGlow2 {
+        0%, 100% { opacity: 1; }
+        45% { opacity: 0.4; }
+        55% { opacity: 0.8; }
+      }
+
+      @keyframes pixelGlow3 {
+        0%, 100% { opacity: 1; }
+        30% { opacity: 0.65; }
+        60% { opacity: 1; }
+        80% { opacity: 0.5; }
       }
 
       @keyframes fadeInText {
