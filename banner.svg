@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400">
   <defs>
     <style>
-      /* Light mode defaults */
+            /* Light mode defaults */
       :root {
         --bg-color-start: #f4f4f5;
         --bg-color-end: #ffffff;
@@ -33,6 +33,9 @@
         fill: var(--text-color);
         font-weight: 400;
         letter-spacing: 0.05em;
+        opacity: 0;
+        animation: fadeInText 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation-delay: 1.2s;
       }
       .email-username {
         fill: var(--text-color);
@@ -50,15 +53,67 @@
 
       #letters rect {
         fill: var(--letter-color) !important;
+        opacity: 0;
+        transform-origin: center;
+        animation: fadeInLetterRect 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
       }
       
+      /* Staggered animation for letters rects */
+      #letters rect:nth-child(5n+1) { animation-delay: 0.1s; }
+      #letters rect:nth-child(5n+2) { animation-delay: 0.25s; }
+      #letters rect:nth-child(5n+3) { animation-delay: 0.4s; }
+      #letters rect:nth-child(5n+4) { animation-delay: 0.55s; }
+      #letters rect:nth-child(5n+5) { animation-delay: 0.7s; }
+
       .bg-rect {
         fill: url(#bg-glow);
+        animation: bgPulse 8s ease-in-out infinite alternate;
       }
 
       .grid-dot {
         fill: var(--grid-color);
-        fill-opacity: var(--grid-opacity);
+        animation: gridPulse 4s ease-in-out infinite alternate;
+      }
+
+      /* Keyframes */
+      @keyframes bgPulse {
+        0% {
+          opacity: 0.85;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes gridPulse {
+        0% {
+          fill-opacity: calc(var(--grid-opacity) * 0.6);
+        }
+        100% {
+          fill-opacity: calc(var(--grid-opacity) * 1.3);
+        }
+      }
+
+      @keyframes fadeInLetterRect {
+        0% {
+          opacity: 0;
+          transform: scale(0.3) translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+
+      @keyframes fadeInText {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
 
