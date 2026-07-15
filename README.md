@@ -28,12 +28,3 @@
 | **`c2go`** | Lightweight Cloudflare dynamic IP daemon for Linux, Windows and Mac | [![Stars](https://img.shields.io/github/stars/InferPort/c2go?style=flat-square&label=stars&color=blue)](https://github.com/InferPort/c2go/stargazers) |
 
 </details>
-
-<br>
-
-### My Web Applications
-
-<kbd>[**Roomie Web**](https://nikitastrike.co/#/roomie)</kbd> 
-<kbd>[**Dawparse Demo**](https://dawparse.nikitastrike.co)</kbd> 
-<kbd>[**Desample Extractor**](https://desample.nikitastrike.co)</kbd>
-
