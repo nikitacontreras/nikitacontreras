@@ -31,12 +31,8 @@
 
 <br>
 <div align="center">
-  <p>Feel free to add my button to your site or recommendations</p>
+  <h6>Feel free to add my button to your site or recommendations</h6>
   <a href="https://github.com/nikitacontreras">
     <img src="badge.svg" alt="nikitastrike button" width="88" height="31">
   </a>
 </div>
-
-```html
-<a href="https://github.com/nikitacontreras"><img src="https://raw.githubusercontent.com/nikitacontreras/nikitacontreras/main/badge.svg" width="88" height="31" alt="nikitastrike"></a>
-```
