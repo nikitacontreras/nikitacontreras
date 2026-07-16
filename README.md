@@ -28,3 +28,11 @@
 | [**`c2go`**](https://github.com/InferPort/c2go) | Lightweight Cloudflare dynamic IP daemon for Linux, Windows and Mac | [![Stars](https://img.shields.io/github/stars/InferPort/c2go?style=flat-square&label=stars&color=blue)](https://github.com/InferPort/c2go/stargazers) |
 
 </details>
+
+<br>
+<div align="center">
+  <p>Feel free to add my button to your site or recommendations</p>
+  <a href="https://github.com/nikitacontreras">
+    <img src="badge.svg" alt="nikitastrike button" width="88" height="31">
+  </a>
+</div>

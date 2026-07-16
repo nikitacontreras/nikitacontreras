@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31">
+  <defs>
+    <style>
+      .bg {
+        fill: #09090b;
+        stroke: #27272a;
+        stroke-width: 1;
+      }
+      .glow-border {
+        fill: none;
+        stroke: #22c55e;
+        stroke-width: 1;
+        opacity: 0.8;
+      }
+      .glow-text {
+        font-family: ui-monospace, SFMono-Regular, SF Pro Mono, Menlo, Monaco, Consolas, monospace;
+        font-size: 9px;
+        font-weight: 700;
+        fill: #22c55e;
+        letter-spacing: 0.05em;
+        text-shadow: 0 0 2px #22c55e;
+      }
+      .sub-text {
+        font-family: ui-monospace, SFMono-Regular, SF Pro Mono, Menlo, Monaco, Consolas, monospace;
+        font-size: 6px;
+        fill: #a1a1aa;
+        letter-spacing: 0.1em;
+        opacity: 0.8;
+      }
+      .pixel-line {
+        stroke: #18181b;
+        stroke-width: 1;
+        stroke-dasharray: 2 2;
+      }
+    </style>
+  </defs>
+  
+  <!-- Outer border -->
+  <rect width="88" height="31" rx="2" class="bg" />
+  
+  <!-- Grid dotted background sutil -->
+  <line x1="1" y1="6" x2="87" y2="6" class="pixel-line" />
+  <line x1="1" y1="12" x2="87" y2="12" class="pixel-line" />
+  <line x1="1" y1="18" x2="87" y2="18" class="pixel-line" />
+  <line x1="1" y1="24" x2="87" y2="24" class="pixel-line" />
+  
+  <!-- Glow Inner Border -->
+  <rect x="2" y="2" width="84" height="27" rx="1" class="glow-border" />
+  
+  <!-- Text -->
+  <text x="44" y="15" text-anchor="middle" dominant-baseline="central" class="glow-text">nikitastrike</text>
+  <text x="44" y="24" text-anchor="middle" dominant-baseline="central" class="sub-text">CYBERSEC / DEVOPS</text>
+</svg>
