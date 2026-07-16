@@ -15,12 +15,10 @@
       }
       .glow-text {
         font-family: ui-monospace, SFMono-Regular, SF Pro Mono, Menlo, Monaco, Consolas, monospace;
-        font-size: 9px;
         font-weight: 700;
         fill: #22c55e;
         letter-spacing: 0.05em;
         text-shadow: 0 0 2px #22c55e;
-        animation: textFlicker 8s linear infinite;
       }
       .sub-text {
         font-family: ui-monospace, SFMono-Regular, SF Pro Mono, Menlo, Monaco, Consolas, monospace;
@@ -41,7 +39,39 @@
         opacity: 0.9;
       }
 
-      /* Animaciones */
+      /* Animaciones de cambio de texto (Loop de 7 segundos en total: 3s slide 1, 2s slide 2, 2s slide 3) */
+      .slide-1 {
+        font-size: 9px;
+        animation: slide1Anim 7s infinite;
+      }
+      .slide-2 {
+        font-size: 8px;
+        animation: slide2Anim 7s infinite;
+      }
+      .slide-3 {
+        font-size: 8px;
+        animation: slide3Anim 7s infinite;
+      }
+
+      /* Slide 1 (nikitastrike) activa de 0% a 42.8% (3 segundos) */
+      @keyframes slide1Anim {
+        0%, 42.8% { opacity: 1; transform: translateY(0); }
+        42.9%, 100% { opacity: 0; transform: translateY(-5px); }
+      }
+
+      /* Slide 2 (CYBERSEC) activa de 42.9% a 71.4% (2 segundos) */
+      @keyframes slide2Anim {
+        0%, 42.8% { opacity: 0; transform: translateY(5px); }
+        42.9%, 71.4% { opacity: 1; transform: translateY(0); }
+        71.5%, 100% { opacity: 0; transform: translateY(-5px); }
+      }
+
+      /* Slide 3 (DEVOPS) activa de 71.5% a 100% (2 segundos) */
+      @keyframes slide3Anim {
+        0%, 71.4% { opacity: 0; transform: translateY(5px); }
+        71.5%, 100% { opacity: 1; transform: translateY(0); }
+      }
+
       @keyframes borderGlow {
         0% {
           opacity: 0.4;
@@ -50,17 +80,6 @@
         100% {
           opacity: 1;
           stroke: #22c55e;
-        }
-      }
-
-      @keyframes textFlicker {
-        0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-          opacity: 1;
-          text-shadow: 0 0 2px #22c55e;
-        }
-        20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-          opacity: 0.7;
-          text-shadow: none;
         }
       }
     </style>
@@ -88,7 +107,22 @@
   <!-- Bottom Right -->
   <path d="M 80 27 L 84 27 L 84 23" class="corner-tick" />
   
-  <!-- Text -->
-  <text x="44" y="14" text-anchor="middle" dominant-baseline="central" class="glow-text">nikitastrike</text>
-  <text x="44" y="23" text-anchor="middle" dominant-baseline="central" class="sub-text">CYBERSEC / DEVOPS</text>
+  <!-- Textos rotativos animados (centrados) -->
+  <!-- Slide 1 (nikitastrike) -->
+  <g class="glow-text slide-1">
+    <text x="44" y="12" text-anchor="middle" dominant-baseline="central">nikitastrike</text>
+    <text x="44" y="22" text-anchor="middle" dominant-baseline="central" class="sub-text">PORTFOLIO</text>
+  </g>
+
+  <!-- Slide 2 (CYBERSEC) -->
+  <g class="glow-text slide-2">
+    <text x="44" y="12" text-anchor="middle" dominant-baseline="central">CYBERSEC</text>
+    <text x="44" y="22" text-anchor="middle" dominant-baseline="central" class="sub-text">INFRASTRUCTURE</text>
+  </g>
+
+  <!-- Slide 3 (DEVOPS) -->
+  <g class="glow-text slide-3">
+    <text x="44" y="12" text-anchor="middle" dominant-baseline="central">DEVOPS</text>
+    <text x="44" y="22" text-anchor="middle" dominant-baseline="central" class="sub-text">AUTOMATION</text>
+  </g>
 </svg>
