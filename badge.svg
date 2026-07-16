@@ -1,49 +1,79 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31">
   <defs>
     <style>
+      :root {
+        --bg-color: #09090b;
+        --border-color: #27272a;
+        --text-color: #ffffff;
+        --subtext-color: #a1a1aa;
+        --grid-color: #27272a;
+      }
+      
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg-color: #ffffff;
+          --border-color: #e4e4e7;
+          --text-color: #09090b;
+          --subtext-color: #71717a;
+          --grid-color: #f4f4f5;
+        }
+      }
+
       .bg {
-        fill: #09090b;
-        stroke: #27272a;
+        fill: var(--bg-color);
+        stroke: var(--border-color);
         stroke-width: 1;
       }
-      .glow-border {
+      .inner-border {
         fill: none;
-        stroke: #22c55e;
+        stroke: var(--border-color);
         stroke-width: 1;
         opacity: 0.8;
-        animation: borderGlow 3s ease-in-out infinite alternate;
       }
       .glow-text {
         font-family: ui-monospace, SFMono-Regular, SF Pro Mono, Menlo, Monaco, Consolas, monospace;
         font-weight: 700;
-        fill: #22c55e;
+        fill: var(--text-color);
         letter-spacing: 0.05em;
-        text-shadow: 0 0 2px #22c55e;
       }
       .sub-text {
         font-family: ui-monospace, SFMono-Regular, SF Pro Mono, Menlo, Monaco, Consolas, monospace;
         font-size: 6px;
-        fill: #a1a1aa;
+        fill: var(--subtext-color);
         letter-spacing: 0.1em;
         opacity: 0.8;
       }
       .pixel-line {
-        stroke: #18181b;
+        stroke: var(--grid-color);
         stroke-width: 1;
         stroke-dasharray: 2 2;
       }
-      .corner-tick {
-        stroke: #22c55e;
-        stroke-width: 1;
-        fill: none;
-        opacity: 0.9;
-      }
 
-      /* Animaciones de cambio de texto (Loop de 7 segundos en total: 3s slide 1, 2s slide 2, 2s slide 3) */
+      /* Animación general de la primera diapositiva (cubre de 0s a 3s dentro de los 7s de loop) */
       .slide-1 {
         font-size: 9px;
         animation: slide1Anim 7s infinite;
       }
+      
+      /* Animación de la ola/rebote para cada letra en la primera instancia */
+      .char-1, .char-2, .char-3, .char-4, .char-5, .char-6, .char-7, .char-8, .char-9, .char-10, .char-11, .char-12 {
+        animation: waveLetter 7s infinite;
+      }
+
+      /* Delays para crear el efecto de ola secuencial en nikitastrike */
+      .char-1  { animation-delay: 0.05s; }
+      .char-2  { animation-delay: 0.12s; }
+      .char-3  { animation-delay: 0.19s; }
+      .char-4  { animation-delay: 0.26s; }
+      .char-5  { animation-delay: 0.33s; }
+      .char-6  { animation-delay: 0.40s; }
+      .char-7  { animation-delay: 0.47s; }
+      .char-8  { animation-delay: 0.54s; }
+      .char-9  { animation-delay: 0.61s; }
+      .char-10 { animation-delay: 0.68s; }
+      .char-11 { animation-delay: 0.75s; }
+      .char-12 { animation-delay: 0.82s; }
+
       .slide-2 {
         font-size: 8px;
         animation: slide2Anim 7s infinite;
@@ -53,34 +83,38 @@
         animation: slide3Anim 7s infinite;
       }
 
+      /* Animación de ola vertical en SVG mediante dy (ya que transform en tspan no tiene soporte consistente en todos los navegadores) */
+      @keyframes waveLetter {
+        0%, 15% {
+          dy: 0px;
+        }
+        20% {
+          dy: -3px;
+        }
+        25%, 100% {
+          dy: 0px;
+        }
+      }
+
       /* Slide 1 (nikitastrike) activa de 0% a 42.8% (3 segundos) */
       @keyframes slide1Anim {
-        0%, 42.8% { opacity: 1; transform: translateY(0); }
-        42.9%, 100% { opacity: 0; transform: translateY(-5px); }
+        0% { opacity: 0; }
+        3%, 38% { opacity: 1; }
+        42.8%, 100% { opacity: 0; }
       }
 
       /* Slide 2 (CYBERSEC) activa de 42.9% a 71.4% (2 segundos) */
       @keyframes slide2Anim {
-        0%, 42.8% { opacity: 0; transform: translateY(5px); }
-        42.9%, 71.4% { opacity: 1; transform: translateY(0); }
-        71.5%, 100% { opacity: 0; transform: translateY(-5px); }
+        0%, 38% { opacity: 0; transform: translateY(5px); }
+        42.8%, 67% { opacity: 1; transform: translateY(0); }
+        71.4%, 100% { opacity: 0; transform: translateY(-5px); }
       }
 
       /* Slide 3 (DEVOPS) activa de 71.5% a 100% (2 segundos) */
       @keyframes slide3Anim {
-        0%, 71.4% { opacity: 0; transform: translateY(5px); }
-        71.5%, 100% { opacity: 1; transform: translateY(0); }
-      }
-
-      @keyframes borderGlow {
-        0% {
-          opacity: 0.4;
-          stroke: #15803d;
-        }
-        100% {
-          opacity: 1;
-          stroke: #22c55e;
-        }
+        0%, 67% { opacity: 0; transform: translateY(5px); }
+        71.4%, 95% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(-5px); }
       }
     </style>
   </defs>
@@ -94,24 +128,15 @@
   <line x1="1" y1="18" x2="87" y2="18" class="pixel-line" />
   <line x1="1" y1="24" x2="87" y2="24" class="pixel-line" />
   
-  <!-- Glow Inner Border -->
-  <rect x="2" y="2" width="84" height="27" rx="1" class="glow-border" />
-
-  <!-- Viñetas en las esquinas (Corner brackets/ticks) -->
-  <!-- Top Left -->
-  <path d="M 4 8 L 4 4 L 8 4" class="corner-tick" />
-  <!-- Top Right -->
-  <path d="M 80 4 L 84 4 L 84 8" class="corner-tick" />
-  <!-- Bottom Left -->
-  <path d="M 4 23 L 4 27 L 8 27" class="corner-tick" />
-  <!-- Bottom Right -->
-  <path d="M 80 27 L 84 27 L 84 23" class="corner-tick" />
+  <!-- Inner Border -->
+  <rect x="2" y="2" width="84" height="27" rx="1" class="inner-border" />
   
   <!-- Textos rotativos animados (centrados) -->
-  <!-- Slide 1 (nikitastrike) -->
+  <!-- Slide 1 (nikitastrike) - centrado verticalmente con efecto ola individual en letras usando dy y tspan -->
   <g class="glow-text slide-1">
-    <text x="44" y="12" text-anchor="middle" dominant-baseline="central">nikitastrike</text>
-    <text x="44" y="22" text-anchor="middle" dominant-baseline="central" class="sub-text">PORTFOLIO</text>
+    <text x="44" y="16" text-anchor="middle" dominant-baseline="central">
+      <tspan class="char-1" dy="0">n</tspan><tspan class="char-2" dy="0">i</tspan><tspan class="char-3" dy="0">k</tspan><tspan class="char-4" dy="0">i</tspan><tspan class="char-5" dy="0">t</tspan><tspan class="char-6" dy="0">a</tspan><tspan class="char-7" dy="0">s</tspan><tspan class="char-8" dy="0">t</tspan><tspan class="char-9" dy="0">r</tspan><tspan class="char-10" dy="0">i</tspan><tspan class="char-11" dy="0">k</tspan><tspan class="char-12" dy="0">e</tspan>
+    </text>
   </g>
 
   <!-- Slide 2 (CYBERSEC) -->
