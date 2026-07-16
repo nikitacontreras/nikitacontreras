@@ -35,4 +35,9 @@
   <a href="https://github.com/nikitacontreras">
     <img src="badge.svg" alt="nikitastrike button" width="88" height="31">
   </a>
+  <br><br>
+  
+  ```html
+  <a href="https://github.com/nikitacontreras"><img src="https://raw.githubusercontent.com/nikitacontreras/nikitacontreras/main/badge.svg" width="88" height="31" alt="nikitastrike"></a>
+  ```
 </div>
